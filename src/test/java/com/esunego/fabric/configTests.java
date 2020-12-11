@@ -1,6 +1,5 @@
 package com.esunego.fabric;
 
-import com.esunego.fabric.service.BlockChainService;
 import com.esunego.fabric.util.ConfigUtil;
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
 import org.bouncycastle.openssl.PEMParser;
@@ -19,31 +18,11 @@ import java.security.PrivateKey;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class FabricsdkDemoApplicationTests {
+public class configTests {
 
-    @Autowired
-    private BlockChainService blockChainService;
     @Autowired
     private ConfigUtil configUtil;
 
-
-    /*
-     *  添加一条数据
-     * */
-    @Test
-    public void add(){
-        String[] data = {"a","b","-500"};
-        blockChainService.addBlockChain(data);
-
-    }
-
-    /*
-     *  查找数据
-     * */
-    @Test
-    public void query(){
-        blockChainService.queryBlockChain(new String[] {"a","b"});
-    }
 
 
     /*

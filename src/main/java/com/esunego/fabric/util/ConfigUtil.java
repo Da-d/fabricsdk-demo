@@ -45,7 +45,7 @@ public class ConfigUtil {
     public String getConfigContents() {
         String configContent = null;
         try {
-            configContent = ConfigService.getConfig("cipher-kms-aes-128-com.esunego.fabric.congfig", "com.esunego", 6000);
+            configContent = ConfigService.getConfig("cipher-kms-aes-128-com.esunego.fabric.yamlCongfig", "com.esunego", 6000);
         } catch (ConfigException e) {
             e.printStackTrace();
         }
